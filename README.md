@@ -53,14 +53,18 @@ Your submission will be assessed based on the following:
 
 ## Submission Instructions
 
-1. **Clone the Submission Repository**
-   - Clone the submission repository to your local machine:
+1. **Clone the Repository**
+   - Clone the repository to your local machine:
      ```bash
      git clone https://github.com/Thrive-Staffing/AndroidDev.git
      ```
+   - Switch to the **submissions branch**:
+     ```bash
+     git checkout submissions
+     ```
 
 2. **Complete the Challenge**
-   - Implement the required features as outlined above.
+   - Implement the required features as outlined above in your local repository.
    - Include a `README.md` file in your submission with:
      - Your approach to solving the challenge.
      - Steps to build and run the app.
@@ -70,15 +74,20 @@ Your submission will be assessed based on the following:
    - Generate an APK file:
      - Open the project in Android Studio.
      - Go to `Build > Build Bundle(s)/APK(s) > Build APK(s)`.
-   - Add the APK to the repository or provide a link in your `README.md` file.
+   - Add the APK to your submission or include a link in your `README.md` file.
 
-4. **Submit Your Work**
-   - Push your changes to the `AndroidDev` repository:
+4. **Push Your Submission to the `submissions` Branch**
+   - Add and commit your changes:
      ```bash
      git add .
      git commit -m "Completed Neurable Android Technical Challenge"
-     git push origin main
      ```
+   - Push your submission to the `submissions` branch:
+     ```bash
+     git push origin submissions
+     ```
+
+5. **Notify the Team**
    - Notify us via email or your designated contact person once your submission is complete.
 
 ---
@@ -86,8 +95,3 @@ Your submission will be assessed based on the following:
 ## Expected Time Commitment
 - This challenge is designed to take **2-3 hours** for an experienced developer.
 - Focus on core tasks like UI design, data simulation, and state management.
-
----
-
-We look forward to your submission! If you have any questions, please contact us at **[Insert Contact Email]**.
-
