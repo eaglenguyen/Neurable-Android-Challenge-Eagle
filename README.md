@@ -52,17 +52,42 @@ Your submission will be assessed based on the following:
 ---
 
 ## Submission Instructions
-1. **Fork This Repository**  
-   - Click the **Fork** button in the top-right corner of this repository to create a copy in your GitHub account.
 
-2. **Clone the Forked Repository**  
-   - Clone your forked repository to your local machine:
+1. **Clone the Submission Repository**
+   - Clone the submission repository to your local machine:
      ```bash
-     git clone https://github.com/<your-username>/Neurable-AndroidTechnicalChallenge.git
+     git clone https://github.com/Thrive-Staffing/AndroidDev.git
      ```
 
-3. **Complete the Challenge**  
+2. **Complete the Challenge**
    - Implement the required features as outlined above.
    - Include a `README.md` file in your submission with:
      - Your approach to solving the challenge.
      - Steps to build and run the app.
+     - Any additional notes or assumptions.
+
+3. **Build and Include an APK (Optional but Recommended)**  
+   - Generate an APK file:
+     - Open the project in Android Studio.
+     - Go to `Build > Build Bundle(s)/APK(s) > Build APK(s)`.
+   - Add the APK to the repository or provide a link in your `README.md` file.
+
+4. **Submit Your Work**
+   - Push your changes to the `AndroidDev` repository:
+     ```bash
+     git add .
+     git commit -m "Completed Neurable Android Technical Challenge"
+     git push origin main
+     ```
+   - Notify us via email or your designated contact person once your submission is complete.
+
+---
+
+## Expected Time Commitment
+- This challenge is designed to take **2-3 hours** for an experienced developer.
+- Focus on core tasks like UI design, data simulation, and state management.
+
+---
+
+We look forward to your submission! If you have any questions, please contact us at **[Insert Contact Email]**.
+
