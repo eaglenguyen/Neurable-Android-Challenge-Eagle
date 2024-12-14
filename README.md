@@ -34,16 +34,16 @@ To build and run this project, follow these steps:
 4) Press start to change focus points
 5) Turn on bluetooth and click Bluetooth button. Click scan, done! (Does not work on emulator)
 
-## APK File
-[Download](https://github.com/eaglenguyen/Neurable-Android-Challenge-Eagle/raw/refs/heads/master/app-debug.apk)
-
+## APK File & Junit Test
+[Apk Download](https://github.com/eaglenguyen/Neurable-Android-Challenge-Eagle/raw/refs/heads/master/app-debug.apk)
 
 
 ## Technologies Used
 * Kotlin
 * Jetpack Compose
 * Dagger/Hilt
-* JUnit
+* [Junit](https://github.com/eaglenguyen/Neurable-Android-Challenge-Eagle/blob/master/app/src/test/java/com/example/focusscore/presentation/focus/FocusScoreViewModelTest.kt)
+
 
 
 
