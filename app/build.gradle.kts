@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.kotlinAndroidKsp)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hiltAndroid)
-
+    alias(libs.plugins.android.junit5)
 }
 
 android {
@@ -60,6 +60,13 @@ dependencies {
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
     ksp(libs.hilt.compiler)
+
+    // Junit5
+    testImplementation(libs.junit.jupiter.api)
+    testRuntimeOnly(libs.junit.jupiter.engine)
+    testImplementation(libs.junit.jupiter.params)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.assertk)
 
 
     testImplementation(libs.junit)

@@ -7,5 +7,4 @@ data class BlueToothUiState(
     val pairedDevices: List<BtDevice> = emptyList(),
     val isLoading: Boolean = false,
     val connected: Boolean = false,
-    val disconnected: Boolean = false
 )

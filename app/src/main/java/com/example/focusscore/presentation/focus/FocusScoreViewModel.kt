@@ -3,7 +3,6 @@ package com.example.focusscore.presentation.focus
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -24,16 +23,17 @@ class FocusScoreViewModel @Inject constructor(
 
 
     fun focusScoreRandomized() {
-        _state.update { it.copy(startAndStop = !it.startAndStop) }
         viewModelScope.launch {
-                while (_state.value.startAndStop) {
                     _state.update {
                         it.copy(focusScore = Random.nextInt(0, 101))
                     }
-                    delay(5000)
-                }
             }
     }
+
+    fun startAndStop() {
+        _state.update { it.copy(startAndStop = !it.startAndStop) }
+    }
+
 
     fun resetScore() {
         _state.update {
@@ -43,6 +43,7 @@ class FocusScoreViewModel @Inject constructor(
             )
         }
     }
+
 
 
 

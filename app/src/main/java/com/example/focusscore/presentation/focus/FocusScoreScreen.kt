@@ -19,8 +19,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -28,6 +30,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import kotlinx.coroutines.delay
 
 @Composable
 fun FocusScoreScreen(
@@ -36,6 +39,7 @@ fun FocusScoreScreen(
 ) {
 
     val state by viewModel.state.collectAsState()
+    val coroutineScope = rememberCoroutineScope()
 
 
     // Display the current focus score
@@ -75,34 +79,36 @@ fun FocusScoreScreen(
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround,
-            ) {
+        ) {
             Button(
                 onClick = {
-                viewModel.focusScoreRandomized()
-            }
+                    viewModel.startAndStop()
+                }
             ) {
-                if (state.startAndStop) {
-                    Icon(
-                        imageVector = Icons.Default.Clear,
-                        contentDescription = "Stop"
-                    )
-                    Text(
-                        text = "Stop"
-                    )
-                } else {
-                    Text(
-                        text = "Start"
-                    )
+
+
+                when (state.startAndStop) {
+                    true -> {
+                        Icon(
+                            imageVector = Icons.Default.Clear,
+                            contentDescription = "Stop"
+                        )
+                        Text(text = "Stop")
+                    }
+
+                    false -> {
+                        Text(text = "Start")
+                    }
                 }
 
 
-        }
+            }
 
             Button(onClick = { viewModel.resetScore() }) {
                 Text(
                     text = "Reset",
 
-                )
+                    )
             }
         }
         Spacer(modifier = Modifier.height(24.dp))
@@ -114,4 +120,14 @@ fun FocusScoreScreen(
         }
 
     }
+
+
+    LaunchedEffect(state.startAndStop) {
+        while (state.startAndStop) {
+            viewModel.focusScoreRandomized()
+            delay(5000)
+        }
+    }
+
+
 }
