@@ -23,6 +23,7 @@ class FocusScoreViewModel @Inject constructor(
 
 
     fun focusScoreRandomized() {
+
         viewModelScope.launch {
                     _state.update {
                         it.copy(focusScore = Random.nextInt(0, 101))

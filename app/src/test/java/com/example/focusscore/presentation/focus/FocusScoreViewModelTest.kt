@@ -2,6 +2,7 @@ package com.example.focusscore.presentation.focus
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
+import assertk.assertions.isNotEqualTo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
@@ -32,14 +33,23 @@ class FocusScoreViewModelTest {
     }
 
     @Test
-    fun `Focus Score changes every 5 seconds`() = runTest {
+    fun `Focus Score changes after 5 seconds`() = runTest {
 
 
         viewModel.focusScoreRandomized()
-        advanceTimeBy(6000)
-        val firstScore = viewModel.state.value.focusScore
 
-        assertThat(firstScore).isEqualTo(2)
+        val initalScore = viewModel.state.value.focusScore
+
+        assertThat(initalScore).isEqualTo(0)
+
+        advanceTimeBy(6000)
+
+        val newScore = viewModel.state.value.focusScore
+
+
+        assertThat(initalScore).isNotEqualTo(newScore)
+
+
 
 
 
