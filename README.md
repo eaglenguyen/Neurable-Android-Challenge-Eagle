@@ -8,7 +8,7 @@ Build a simplified Android app to demonstrate your ability to design a basic UI 
 
 My goal was to simulate a focus score that changes every 5 seconds and to mock a Bluetooth scan.
 
-The first step was understanding the fundamentals of the app. Implementing the focus score logic, which updates every 5 seconds, was straightforward as it was similar to a random number generator I made before. I started with this logic to establish a solid foundation for the app. The focus points logic is fairly simply and has only 2 functions and a StateFlow that holds the initial value for the score and the button press which is located in the viewmodel.
+The first step was understanding the fundamentals of the app. Implementing the focus score logic, which updates every 5 seconds, was straightforward as it was similar to a random number generator I made before. I started with this logic to establish a solid foundation for the app. The focus points logic was fairly simply and has only 3 functions and a StateFlow that holds the initial value for the score and the button press which is located in the viewmodel.
 
 Once the focus score functionality was in place, I moved on to implementing the Bluetooth scan feature. This presented a significant challenge, as I had never worked with Bluetooth in an app before. After hours of researching YouTube tutorials and diving into Stack Overflow discussions, I successfully implemented the Bluetooth logic and was able to scan for other devices. This logic was a bit more complex compared to the focus score. In the viewmodel, the bluetooth logic has 2 functions for scanning and stop scanning, a Stateflow that handles the list of paired/scanned devices, and the mock connection UI flow when trying to pair to a device. 
 
