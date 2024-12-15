@@ -2,7 +2,7 @@
 
 
 ## Objective
-Build a simplified Android app to demonstrate your ability to design a basic UI and simulate device communication relevant to EEG-based focus monitoring.  <br>
+Build a simplified Android app to demonstrate the ability to design a basic UI and simulate device communication relevant to EEG-based focus monitoring.  <br>
 
 ## Approach
 
