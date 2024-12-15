@@ -34,7 +34,7 @@ To build and run this project, follow these steps:
 4) Press start to change focus points
 5) Turn on bluetooth and click Bluetooth button. Click scan, done! (Does not work on emulator)
 
-## APK File & Junit Test
+## APK File
 [Apk Download](https://github.com/eaglenguyen/Neurable-Android-Challenge-Eagle/raw/refs/heads/master/app-debug.apk)
 
 
