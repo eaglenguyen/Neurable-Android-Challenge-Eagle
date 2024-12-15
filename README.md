@@ -12,7 +12,7 @@ The first step was understanding the fundamentals of the app. Implementing the f
 
 Once the focus score functionality was in place, I moved on to implementing the Bluetooth scan feature. This presented a significant challenge, as I had never worked with Bluetooth in an app before. After hours of researching YouTube tutorials and diving into Stack Overflow discussions, I successfully implemented the Bluetooth logic and was able to scan for other devices. This logic was a bit more complex compared to the focus score. In the viewmodel, the bluetooth logic has 2 functions for scanning and stop scanning, a Stateflow that handles the list of paired/scanned devices, and the mock connection UI flow when trying to pair to a device. 
 
-With both features functional, I cleaned up the UI using Jetpack Compose and finished off the project using Clean Architecture and the MVVM design pattern. I organized the app into 4-5 well-defined packages.
+With both features functional, I cleaned up the UI using Jetpack Compose, Dagger/Hilt for DI, and finished off the project using Clean Architecture and the MVVM design pattern. I organized the app into 4-5 well-defined packages.
 
 
 
